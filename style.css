@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  transition: 0.3s;
+}
+
+body.dark {
+  /* background-color: #282872; */
+  /* background-color: #161b22; */
+  background-color: #0d1117;
+  transition: 0.3s;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 20vh;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+}
+
+header h1 {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #0d1117;
+}
+
+header i {
+  color: #0d1117;
+  font-size: 3rem;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* Dark Mode Button */
+
+.switch {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(39, 38, 38);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.flicker {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+    inset -4px -4px 4px rgb(195 193 198 / 90%);
+  transition: 0.3s;
+}
+
+.dark .flicker {
+  transform: translateX(40px);
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  /* right: 10px; */
+  left: 45px;
+}
+
+.dark {
+  background-color: rgb(57, 57, 57);
+  transition: 0.3s;
+}
+
+.dark h1,
+.dark i {
+  color: #eee;
+}
+
+/* Search Form */
+
+.user-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: #161b22;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  /* margin-bottom: 2rem; */
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+  color: #bbb;
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  max-width: 800px;
+  min-width: 300px;
+  /* background-color: #4c2885; */
+  background-color: #161b22;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #eee;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info p {
+  margin-bottom: 10px;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  color: #161b22;
+  background-color: #eee;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  text-decoration: none;
+  color: #161b22;
+  background-color: #eee;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  width: 100px;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .user-form {
+    max-width: 300px;
+  }
+
+  .search-box {
+    height: 5vh;
+  }
+}
