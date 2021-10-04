@@ -70,6 +70,7 @@ header i {
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 }
 
 .flicker {
@@ -80,8 +81,7 @@ header i {
   position: absolute;
   top: 5px;
   left: 5px;
-  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
-    inset -4px -4px 4px rgb(195 193 198 / 90%);
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgb(195 193 198 / 90%);
   transition: 0.3s;
 }
 
@@ -128,8 +128,7 @@ header i {
   /* margin-bottom: 2rem; */
   font-family: inherit;
   font-size: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .user-form input::placeholder {
@@ -146,8 +145,7 @@ header i {
   /* background-color: #4c2885; */
   background-color: #161b22;
   border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 3rem;
   margin: 0 1.5rem;
@@ -203,13 +201,7 @@ header i {
 }
 
 .animated-bg {
-  background-image: linear-gradient(
-    to right,
-    #f6f7f8 0%,
-    #edeef1 10%,
-    #f6f7f8 20%,
-    #f6f7f8 100%
-  );
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
   background-size: 200% 100%;
   animation: bgPos 1s linear infinite;
 }
